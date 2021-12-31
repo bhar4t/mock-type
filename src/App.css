@@ -12,6 +12,14 @@
   padding: 0px 10px;
   color: white;
 }
+.ab-menu-selected {
+  padding: 0px 10px;
+  color: white;
+  height: 92%;
+  display: flex;
+  align-items: center;
+  border-bottom: solid gray 3px;
+}
 /* End - AppBar.tsx */
 
 /* BottomNavigation.tsx */

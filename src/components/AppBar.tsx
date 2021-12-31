@@ -1,16 +1,25 @@
+import { useDispatch } from 'react-redux'
+import { selectMenu } from '../redux/configs/configAction'
 
-const menus = [
-    "MyView",
-    "Classic",
-    "Account Plan",
-    "DM Suit Report",
-    "HTML Redirect",
-]
+interface AppBarProps {
+    menus: Menu[]
+    selectedMenu: Menu
+}
 
-export default function AppBar() {
+export default function AppBar({ menus, selectedMenu }: AppBarProps): JSX.Element {
+    const dispatch = useDispatch()
+    const clickHandler = (menu: Menu) => dispatch(selectMenu(menu))
+
     return (
         <div className="ab-container">
-            {menus.map(e => <span key={e} className="ab-menu">{e}</span>)}
+            {menus.map(({value, label}: Menu) =>
+                <span
+                    key={value}
+                    onClick={(evt: any) => clickHandler({value, label})}
+                    className={`ab-menu${value === selectedMenu.value ? '-selected' : ''}`}
+                >
+                    {label}
+                </span>)}
         </div>
     )
 }
