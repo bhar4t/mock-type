@@ -1,12 +1,11 @@
 import RightInfoBar from './RightInfoBar'
+import LeftInfoBar from './LeftInfoBar'
 
 export default function InfoBar() {
     return (
         <div className="ib-container">
-            <div className="ib-child ib-left"></div>
-            <div className="ib-child">
-                <RightInfoBar />
-            </div>
+            <LeftInfoBar />
+            <RightInfoBar />
         </div>
     )
 }
