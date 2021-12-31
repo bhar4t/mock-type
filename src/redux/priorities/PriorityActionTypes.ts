@@ -1,0 +1,5 @@
+const LOAD_PRIORITIES = "LOAD_PRIORITIES"
+
+export {
+    LOAD_PRIORITIES
+}

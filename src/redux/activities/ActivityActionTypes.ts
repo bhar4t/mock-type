@@ -1,0 +1,5 @@
+const LOAD_ACTIVITIES = "LOAD_ACTIVITIES"
+
+export {
+    LOAD_ACTIVITIES
+}
