@@ -8,7 +8,7 @@ interface SiteNamesProp {
 }
 
 export default function SiteNames({ sites, selectedSite }: SiteNamesProp) {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch<DispatchSiteType>()
     const clickHandler = (site: any) => dispatch(selectSite(site));
 
     return (

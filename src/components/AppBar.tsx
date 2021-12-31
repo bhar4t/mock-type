@@ -7,7 +7,7 @@ interface AppBarProps {
 }
 
 export default function AppBar({ menus, selectedMenu }: AppBarProps): JSX.Element {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch<DispatchConfigType>()
     const clickHandler = (menu: Menu) => dispatch(selectMenu(menu))
 
     return (

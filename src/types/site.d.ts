@@ -20,4 +20,4 @@ type SiteAction = {
     payload: Site
 }
 
-type DispatchType = (args: SiteAction) => SiteAction
+type DispatchSiteType = (args: SiteAction) => SiteAction

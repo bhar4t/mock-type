@@ -13,4 +13,4 @@ type ConfigAction = {
     payload: Menu | Menu[]
 }
 
-type DispatchConfigAction = (args: ConfigAction) => ConfigAction
+type DispatchConfigType = (args: ConfigAction) => ConfigAction
