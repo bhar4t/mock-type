@@ -165,16 +165,16 @@
 .rib-arr-up {
   width: 0; 
   height: 0; 
-  border-left: 6vh solid transparent;
-  border-right: 6vh solid transparent;
-  border-bottom: 6vh solid#5a8e18;
+  border-left: 7vh solid transparent;
+  border-right: 7vh solid transparent;
+  border-bottom: 7vh solid#5a8e18;
 }
 .rib-arr-down {
   width: 0; 
   height: 0; 
-  border-left: 6vh solid transparent;
-  border-right: 6vh solid transparent;
-  border-top: 6vh solid #c00000;
+  border-left: 7vh solid transparent;
+  border-right: 7vh solid transparent;
+  border-top: 7vh solid #c00000;
 }
 .rib-btn-container {
   display: flex;
