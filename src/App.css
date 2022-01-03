@@ -193,6 +193,19 @@
   height: 100%;
   width: 100%;
 }
+.rib-count {
+  font-weight: 700;
+  font-size: 4vh;
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+.rib-green {
+  color: #5a8e18
+}
+.rib-red {
+  color: #c00000
+}
 .rib-date {
   color: #e95b5a;
   text-decoration: underline;

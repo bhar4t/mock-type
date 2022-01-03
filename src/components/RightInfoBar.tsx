@@ -5,8 +5,14 @@ export default function RightInfoBar() {
         <div className="rib-child">
             <div className="rib-container">
                 <div className="rib-acts">
-                    <div><div className="rib-arr-up" /><span style={{ color: '#5a8e18', fontWeight: 700, fontSize: '4vh', width: '100%', display: 'flex', justifyContent: 'center' }}>5</span></div>
-                    <div><div className="rib-arr-down" /><span style={{ color: '#c00000', fontWeight: 700, fontSize: '4vh', width: '100%', display: 'flex', justifyContent: 'center' }}>3</span></div>
+                    <div>
+                        <div className="rib-arr-up" />
+                        <span className='rib-count rib-green'>5</span>
+                    </div>
+                    <div>
+                        <div className="rib-arr-down" />
+                        <span className='rib-count rib-red'>3</span>
+                    </div>
                 </div>
                 <div className="rib-detail">
                     <span>Sync:</span><br />
