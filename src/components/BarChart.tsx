@@ -1,64 +1,6 @@
 import { ResponsiveBar } from '@nivo/bar'
 
-const barData = [
-    {
-      "country": "AD",
-      "Tier 1": 182,
-      "Tier 1Color": "#005b7f",
-      "Tier 2": 199,
-      "Tier 2Color": "#5386bf",
-      "Tier 3": 139,
-      "Tier 3Color": "#7cc3e2",
-      "Blank": 109,
-      "BlankColor": "#78be20",
-    },
-    {
-      "country": "AE",
-      "Tier 1": 160,
-      "Tier 1Color": "#005b7f",
-      "Tier 2": 106,
-      "Tier 2Color": "#5386bf",
-      "Tier 3": 119,
-      "Tier 3Color": "#7cc3e2",
-      "Blank": 40,
-      "BlankColor": "#78be20",
-    },
-    {
-      "country": "AF",
-      "Tier 1": 94,
-      "Tier 1Color": "#005b7f",
-      "Tier 2": 67,
-      "Tier 2Color": "#5386bf",
-      "Tier 3": 171,
-      "Tier 3Color": "#7cc3e2",
-      "Blank": 72,
-      "BlankColor": "#78be20",
-    },
-    {
-      "country": "AG",
-      "Tier 1": 30,
-      "Tier 1Color": "#005b7f",
-      "Tier 2": 154,
-      "Tier 2Color": "#5386bf",
-      "Tier 3": 58,
-      "Tier 3Color": "#7cc3e2",
-      "Blank": 44,
-      "BlankColor": "#78be20",
-    },
-    {
-      "country": "AI",
-      "Tier 1": 116,
-      "Tier 1Color": "#005b7f",
-      "Tier 2": 44,
-      "Tier 2Color": "#5386bf",
-      "Tier 3": 126,
-      "Tier 3Color": "#7cc3e2",
-      "Blank": 143,
-      "BlankColor": "#78be20",
-    }
-  ]
-
-const MyResponsiveBar = ({ data = barData }) => (
+const MyResponsiveBar = ({ data }: any) => (
     <ResponsiveBar
         data={data}
         keys={[ 'Tier 1', 'Tier 2', 'Tier 3', 'Blank' ]}
