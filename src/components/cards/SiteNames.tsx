@@ -13,7 +13,7 @@ export default function SiteNames({ sites, selectedSite }: SiteNamesProp) {
 
     return (
         <div className="sn-container">
-            <table className="sn-table">
+            <table className="sn-table" cellSpacing="0">
                 <thead>
                     <tr className="sn-htr">
                         {["Site Name", "Medical Tier", "Score", "EDU Score", "ESTA Score", "Link"]

@@ -67,13 +67,13 @@ export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesPro
                     ]}
                     defs={[
                         {
-                            "id": "lines",
-                            "type": "patternLines",
-                            "spacing": 5,
-                            "rotation": 27,
-                            "lineWidth": 2,
-                            "background": "#ffffff",
-                            "color": "#d7d1d1"
+                            id: "lines",
+                            type: "patternLines",
+                            spacing: 5,
+                            rotation: 27,
+                            lineWidth: 2,
+                            background: "#ffffff",
+                            color: "#d7d1d1"
                         }
                     ]}
                     fill={[

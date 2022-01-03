@@ -89,13 +89,12 @@ const initialState: ChartState = {
 const chartReducer = (state: ChartState = initialState, action: ChartAction) => {
     switch(action.type) {
         case SWITCH_CHART: 
-            if (action.payload === 'alerts') {
-                return { ...state, selectedChart: 'alerts', chartData: alertsChartData }
-            } else if (action.payload === 'priority') {
-                return { ...state, selectedChart: 'priority', chartData: priorityChartData }
-            } else {
-                return { ...state, selectedChart: 'overall', chartData: overallChartData }
-            }
+            if (action.payload === 'alerts')
+                return { ...state, selectedChart: action.payload, chartData: alertsChartData }
+            else if (action.payload === 'priority')
+                return { ...state, selectedChart: action.payload, chartData: priorityChartData }
+            else
+                return { ...state, selectedChart: action.payload, chartData: overallChartData }
         default: 
             return state
     }
