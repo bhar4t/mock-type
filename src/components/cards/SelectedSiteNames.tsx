@@ -3,15 +3,11 @@ import { ArrowRight, ArrowUp } from "../../icons/Icons";
 
 const data = [
     {
-      "country": "AD",
-      "hot dog": 180,
-      "hot dogColor": "hsl(92, 70%, 50%)",
-      "burger": 68,
-      "burgerColor": "hsl(245, 70%, 50%)",
-      "sandwich": 10,
-      "sandwichColor": "hsl(114, 70%, 50%)",
-      "kebab": 176,
-      "kebabColor": "hsl(281, 70%, 50%)"
+      "country": "1",
+      "File": 4,
+      "Email": 2,
+      "Phone": 1,
+      "Planned": 2,
     }
 ]
 
@@ -39,15 +35,18 @@ export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesPro
             </div>
             <div className="ssn-chart">
                 <ResponsiveBar
-                    data={data}
-                    keys={[ 'hot dog', 'burger', 'sandwich', 'kebab', 'fries', 'donut' ]}
+                    data={selectedSite?.name === "Site Not Selected" ? [] : data}
+                    keys={[ 'File', 'Email', 'Phone', 'Planned' ]}
                     indexBy="country"
-                    margin={{ top: 10, right: 130, bottom: 25, left: 60 }}
+                    margin={{ top: 10, right: 130, bottom: 38, left: 60 }}
                     padding={0.3}
                     layout="horizontal"
                     valueScale={{ type: 'linear' }}
                     indexScale={{ type: 'band', round: true }}
-                    colors={{ scheme: 'nivo' }}
+                    enableLabel={false}
+                    colors={[
+                        "#4371c4","#ed7d31","#a4a4a4", '#d7d1d1'
+                      ]}
                     legends={[
                         {
                             dataFrom: 'keys',
@@ -56,23 +55,35 @@ export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesPro
                             justify: true,
                             translateX: 0,
                             translateY: 36,
-                            itemsSpacing: 6,
+                            itemsSpacing: 2,
                             itemWidth: 64,
-                            itemHeight: 10,
+                            itemHeight: 8,
                             itemDirection: 'left-to-right',
-                            itemOpacity: 0.85,
-                            symbolSize: 8,
+                            itemOpacity: 0.9,
+                            symbolSize: 5,
                         }
                     ]}
-                    borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
+                    defs={[
+                        {
+                            "id": "lines",
+                            "type": "patternLines",
+                            "spacing": 5,
+                            "rotation": 27,
+                            "lineWidth": 2,
+                            "background": "#ffffff",
+                            "color": "#d7d1d1"
+                        }
+                    ]}
+                    fill={[
+                        {
+                            match: {
+                                id: 'Planned'
+                            },
+                            id: 'lines'
+                        }
+                    ]}
                     axisTop={null}
                     axisRight={null}
-                    labelSkipWidth={12}
-                    labelSkipHeight={12}
-                    labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
-                    role="application"
-                    ariaLabel="Nivo bar chart demo"
-                    barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in country: "+e.indexValue}}
                 />
             </div>
             <div className="ssn-footer">
