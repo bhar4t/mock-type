@@ -45,9 +45,10 @@ export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesPro
                     indexScale={{ type: 'band', round: true }}
                     enableLabel={false}
                     isInteractive={false}
-                    colors={[
-                        "#4371c4","#ed7d31","#a4a4a4", '#d7d1d1'
-                      ]}
+                    colors={[ "#4371c4","#ed7d31","#a4a4a4", '#d7d1d1' ]}
+                    theme= {{
+                        textColor: '#a4a4a4',
+                    }}
                     legends={[
                         {
                             dataFrom: 'keys',
@@ -85,6 +86,8 @@ export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesPro
                     ]}
                     axisTop={null}
                     axisRight={null}
+                    axisLeft={{ tickSize: 0 }}
+                    axisBottom={{ tickSize: 0 }}
                 />
             </div>
             <div className="ssn-footer">
