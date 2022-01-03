@@ -1,0 +1,5 @@
+const SWITCH_CHART = "SWITCH_CHART"
+
+export {
+    SWITCH_CHART
+}

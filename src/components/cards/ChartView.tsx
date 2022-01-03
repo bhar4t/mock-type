@@ -1,98 +1,13 @@
-import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import BarChart from '../BarChart'
-
-const overallChartData = [
-    {
-      "title": "Need More Data",
-      "Tier 1": 182,
-      "Tier 2": 199,
-      "Tier 3": 139,
-      "Blank": 109,
-    },
-    {
-      "title": "Not Ready",
-      "Tier 1": 160,
-      "Tier 2": 106,
-      "Tier 3": 119,
-      "Blank": 40,
-    },
-    {
-      "title": "Ready With Gaps",
-      "Tier 1": 94,
-      "Tier 2": 67,
-      "Tier 3": 171,
-      "Blank": 72,
-    },
-    {
-      "title": "Ready Capable",
-      "Tier 1": 30,
-      "Tier 2": 154,
-      "Tier 3": 58,
-      "Blank": 44,
-    },
-    {
-      "title": "Ready Excellent",
-      "Tier 1": 116,
-      "Tier 2": 44,
-      "Tier 3": 126,
-      "Blank": 143,
-    }
-  ]
-
-  const priorityChartData = [
-    {
-      "title": "Need More Data",
-      "Tier 1": 182,
-      "Tier 2": 199,
-      "Tier 3": 139,
-      "Blank": 109,
-    },
-    {
-      "title": "Not Ready",
-      "Tier 1": 160,
-      "Tier 2": 106,
-      "Tier 3": 119,
-      "Blank": 40,
-    },
-    {
-      "title": "Ready With Gaps",
-      "Tier 1": 94,
-      "Tier 2": 67,
-      "Tier 3": 171,
-      "Blank": 72,
-    }
-  ]
-
-  const alertsChartData = [
-    {
-      "title": "Score Decreased",
-      "Tier 1": 182,
-      "Tier 2": 199,
-      "Tier 3": 139,
-      "Blank": 109,
-    },
-    {
-      "title": "Score Increased",
-      "Tier 1": 160,
-      "Tier 2": 106,
-      "Tier 3": 119,
-      "Blank": 40,
-    },
-  ]
+import { switchChart } from '../../redux/charts/chartActions'
 
 export default function ChartView() {
-    const [selectedChart, setSelectedChart] = React.useState("alerts");
-    const [chartData, setBarData] = React.useState(alertsChartData)
-    const clickHandler = (chartType: "alerts" |  "priority" | "overall") => {
-        if (chartType === "alerts") {
-            setBarData(alertsChartData)
-        } else if (chartType === "priority") {
-            setBarData(priorityChartData)
-        } else {
-            setBarData(overallChartData)
-        }
-        setSelectedChart(chartType)
-    }
+    const dispatch = useDispatch<dispatchChartType>()
+    const selectedChart = useSelector<ChartState, ChartState["selectedChart"]>((state: any) => state.chart.selectedChart)
+    const chartData = useSelector<ChartState, ChartState["chartData"]>((state: any) => state.chart.chartData)
+
+    const clickHandler = (chartType: "alerts" |  "priority" | "overall") => dispatch(switchChart(chartType))
 
     return (
         <div className="cv-container">
