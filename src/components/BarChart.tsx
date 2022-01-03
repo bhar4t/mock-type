@@ -14,6 +14,19 @@ const MyResponsiveBar = ({ data }: any) => (
         colors={[
           "#005b7f","#5587c0","#7cc3e2" ,"#78be20",
         ]}
+        theme= {{
+          textColor: '#1488f5',
+          axis: {
+            domain: {
+              line: {
+                stroke: "#cae7ff",
+                strokeWidth: 1
+              }
+            }
+          },
+        }}
+        labelTextColor={'#7cc3e2'}
+        isInteractive={false}
         enableGridY={false}
         enableGridX={false}
         axisTop={null}

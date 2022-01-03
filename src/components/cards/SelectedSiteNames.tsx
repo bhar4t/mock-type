@@ -44,6 +44,7 @@ export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesPro
                     valueScale={{ type: 'linear' }}
                     indexScale={{ type: 'band', round: true }}
                     enableLabel={false}
+                    isInteractive={false}
                     colors={[
                         "#4371c4","#ed7d31","#a4a4a4", '#d7d1d1'
                       ]}
