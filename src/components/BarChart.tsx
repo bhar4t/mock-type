@@ -29,6 +29,9 @@ const MyResponsiveBar = ({ data }: any) => (
         axisTop={null}
         axisRight={null}
         axisBottom={null}
+        axisLeft={{
+          tickSize: 0
+        }}
         legends={[
           {
               dataFrom: 'keys',
