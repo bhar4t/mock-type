@@ -11,9 +11,7 @@ const MyResponsiveBar = ({ data }: any) => (
         layout="horizontal"
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: true }}
-        colors={[
-          "#005b7f","#5587c0","#7cc3e2" ,"#78be20",
-        ]}
+        colors={[ "#005b7f","#5587c0","#7cc3e2" ,"#78be20" ]}
         theme= {{
           textColor: '#1488f5',
           axis: {
@@ -25,7 +23,6 @@ const MyResponsiveBar = ({ data }: any) => (
             }
           },
         }}
-        labelTextColor={'#7cc3e2'}
         isInteractive={false}
         enableGridY={false}
         enableGridX={false}
