@@ -67,10 +67,6 @@
   align-items: center;
   padding-top: 4px;
 }
-.cv-btn-selected {
-  background-color: #005588;
-  color: white
-}
 .cv-container {
   display: flex;
   flex-direction: column;
@@ -79,6 +75,10 @@
   width: 98%;
   box-shadow: #9d9d9d 0px 0px 2px 3px;
   border-radius: 2px;
+}
+.cv-selected {
+  background-color: #005588;
+  color: white
 }
 /* End - ChartView.tsx */
 
