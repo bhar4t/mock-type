@@ -4,28 +4,28 @@ const initialState: ActivityState = {
         { 
             date: '1:14 PM',
             name: 'Abdul Abdul',
-            indicator: '#ff6868',
+            indicator: 'var(--lighterror)',
             type: 'Virtual', tier: 'T1',
             link: 'https://example.com'
         },
         { 
             date: '3:28',
             name: 'Abdul Abdul',
-            indicator: '#ff6868',
+            indicator: 'var(--lighterror)',
             type: 'Face to face', tier: 'T2',
             link: 'https://example.com'
         },
         { 
             date: '3:29',
             name: 'Terni Abimbola',
-            indicator: 'lightgreen',
+            indicator: 'var(--lightsuccess)',
             type: 'Face to face', tier: 'T3',
             link: 'https://example.com'
         },
         { 
             date: '3:29',
             name: 'Rasha Abdul Fahim',
-            indicator: 'lightgreen',
+            indicator: 'var(--lightsuccess)',
             type: 'Face to face', tier: 'T1',
             link: 'https://example.com'
         },

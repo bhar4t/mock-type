@@ -11,13 +11,13 @@ const MyResponsiveBar = ({ data }: any) => (
         layout="horizontal"
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: true }}
-        colors={[ "#005b7f","#5587c0","#7cc3e2" ,"#78be20" ]}
+        colors={[ "var(--barColor1)","var(--barColor2)","var(--barColor3)" ,"var(--barColor4)" ]}
         theme= {{
-          textColor: '#1488f5',
+          textColor: 'var(--textColor)',
           axis: {
             domain: {
               line: {
-                stroke: "#cae7ff",
+                stroke: "var(--stroke)",
                 strokeWidth: 1
               }
             }

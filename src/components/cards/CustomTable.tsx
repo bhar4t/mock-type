@@ -3,13 +3,13 @@ import { Link, Maximize } from "../../icons/Icons";
 const styles = {
     headTd: (index: number) => ({
         paddingLeft: index === 0 ? 12 : 0,
-        borderBottom: 'solid #9d9d9d 1px'
+        borderBottom: 'solid var(--shadow) 1px'
     }),
     btr: (zigzag: any, index: number) => ({
-        color: 'gray', fontSize: 11, backgroundColor: zigzag ? index % 2 !== 0 ? "#f3f1f2" : "white" : "white"
+        color: 'var(--gray)', fontSize: 11, backgroundColor: zigzag ? index % 2 !== 0 ? "var(--background)" : "var(--white)" : "var(--white)"
     }),
     btd: (length: number, index: number, i: number) => ({
-        borderBottom: length - 1 === index ? 'none' : 'solid #9d9d9d 1px',
+        borderBottom: length - 1 === index ? 'none' : 'solid var(--shadow) 1px',
         paddingLeft: i === 0 ? 12 : 0
     }),
     indicator: (indicator: any) => ({

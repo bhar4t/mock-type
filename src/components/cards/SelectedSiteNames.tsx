@@ -45,9 +45,9 @@ export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesPro
                     indexScale={{ type: 'band', round: true }}
                     enableLabel={false}
                     isInteractive={false}
-                    colors={[ "#4371c4","#ed7d31","#a4a4a4", '#d7d1d1' ]}
+                    colors={[ "var(--barColor5)","var(--barColor6)","var(--barColor7)", "var(--barColor8)" ]}
                     theme= {{
-                        textColor: '#a4a4a4',
+                        textColor: "var(--barColor7)",
                     }}
                     legends={[
                         {
@@ -72,8 +72,8 @@ export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesPro
                             spacing: 5,
                             rotation: 27,
                             lineWidth: 2,
-                            background: "#ffffff",
-                            color: "#d7d1d1"
+                            background: "var(--white)",
+                            color: "var(--barColor8)"
                         }
                     ]}
                     fill={[
