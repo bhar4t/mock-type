@@ -1,7 +1,23 @@
+:root {
+  --primary: #005588;
+  --success: #5a8e18;
+  --error: #c00000;
+  --orange: #ff9b12;
+  --gradient1: #ff9b12;
+  --gradient2: #e54c00;
+  --shadow: #9d9d9d;
+  --gray: gray;
+  --background: #f2f2f4;
+  --background2: #add8e6;
+  --border: #d5d4d6;
+  --white: #ffffff;
+  --black: #000000;
+}
+
 /* AppBar.tsx */
 .ab-container {
-  background: rgb(255,155,18);
-  background: linear-gradient(90deg, rgba(255,155,18,1) 0%, rgba(230,82,1,1) 50%);
+  background: var(--orange);
+  background: linear-gradient(90deg, var(--gradient1) 0%, var(--gradient2) 50%);
   width: 100%;
   height: 68px;
   display: flex;
@@ -10,15 +26,15 @@
 }
 .ab-menu {
   padding: 0px 10px;
-  color: white;
+  color: var(--white);
 }
 .ab-menu-selected {
   padding: 0px 10px;
-  color: white;
+  color: var(--white);
   height: 92%;
   display: flex;
   align-items: center;
-  border-bottom: solid gray 3px;
+  border-bottom: solid var(--gray) 3px;
 }
 /* End - AppBar.tsx */
 
@@ -58,8 +74,8 @@
 .cv-btn {
   width: 160px;
   font-size: 11px;
-  color: #005588;
-  border: solid #005588 1px;
+  color: var(--primary);
+  border: solid var(--primary) 1px;
 }
 .cv-btn-container {
   display: flex;
@@ -73,12 +89,12 @@
   overflow: auto;
   height: 28%;
   width: 98%;
-  box-shadow: #9d9d9d 0px 0px 2px 3px;
+  box-shadow: var(--shadow) 0px 0px 2px 3px;
   border-radius: 2px;
 }
 .cv-selected {
-  background-color: #005588;
-  color: white
+  background-color: var(--primary);
+  color: var(--white)
 }
 /* End - ChartView.tsx */
 
@@ -86,7 +102,7 @@
 .ct-container {
   height: 46%;
   width: 98%;
-  box-shadow: #9d9d9d 0px 0px 2px 3px;
+  box-shadow: var(--shadow) 0px 0px 2px 3px;
   border-radius: 2px;
   overflow: auto;
   user-select: none;
@@ -96,13 +112,13 @@
   align-items: center;
 }
 .ct-htr {
-  color: gray;
+  color: var(--gray);
   font-size: 11px;
 }
 .ct-table {
   width: 100%;
-  border-top: solid #9d9d9d 1px;
-  border-bottom: solid #9d9d9d 1px
+  border-top: solid var(--shadow) 1px;
+  border-bottom: solid var(--shadow) 1px
 }
 .ct-title {
   font-weight: 500;
@@ -129,14 +145,14 @@
 .ib-container {
   flex: 1.5;
   width: 100%;
-  background-color: #f2f2f4;
-  box-shadow: 1px 1px 1px 1px gray;
+  background-color: var(--background);
+  box-shadow: 1px 1px 1px 1px var(--gray);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .ib-left {
-  background-color: lightblue;
+  background-color: var(--background2);
 }
 /* End - InfoBar.tsx */
 
@@ -156,7 +172,7 @@
 /* RightInfoBar.tsx */
 .rib-acts {
   flex: 2;
-  border-right: solid #d5d4d6 1px;
+  border-right: solid var(--border) 1px;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -167,14 +183,14 @@
   height: 0; 
   border-left: 7vh solid transparent;
   border-right: 7vh solid transparent;
-  border-bottom: 7vh solid#5a8e18;
+  border-bottom: 7vh solid var(--success);
 }
 .rib-arr-down {
   width: 0; 
   height: 0; 
   border-left: 7vh solid transparent;
   border-right: 7vh solid transparent;
-  border-top: 7vh solid #c00000;
+  border-top: 7vh solid var(--error);
 }
 .rib-btn-container {
   display: flex;
@@ -201,13 +217,13 @@
   justify-content: center
 }
 .rib-green {
-  color: #5a8e18
+  color: var(--success)
 }
 .rib-red {
-  color: #c00000
+  color: var(--error)
 }
 .rib-date {
-  color: #e95b5a;
+  color: var(--gradient2);
   text-decoration: underline;
 }
 .rib-detail {
@@ -233,7 +249,7 @@
 .ssn-container {
   height: 30%;
   width: 98%;
-  box-shadow: #9d9d9d 0px 0px 2px 3px;
+  box-shadow: var(--shadow) 0px 0px 2px 3px;
   border-radius: 2px
 }
 .ssn-chart {
@@ -244,7 +260,7 @@
   font-size: 11px;
   font-weight: 600;
   padding-left: 10px;
-  color: #005588;
+  color: var(--primary);
 }
 .ssn-score {
   font-size: 9px;
@@ -270,13 +286,13 @@
   align-items: center;
 }
 .ssn-score-title {
-  color: #005588;
+  color: var(--primary);
   font-size: 8px;
   font-weight: 600;
   padding-right: 4vw;
 }
 .ssn-title {
-  color: #005588;
+  color: var(--primary);
   white-space: nowrap;
   font-size: 12px;
   text-overflow: ellipsis;
@@ -295,33 +311,33 @@
 .sn-container {
   height: 30%;
   width: 98%;
-  box-shadow: #9d9d9d 0px 0px 2px 3px;
+  box-shadow: var(--shadow) 0px 0px 2px 3px;
   border-radius: 2px;
   overflow: auto;
 }
 .sn-btd {
   user-select: none;
-  color: black;
+  color: var(--black);
 }
 .sn-btd-link {
-  background-color: white;
+  background-color: var(--white);
 }
 .sn-btd-selected {
   user-select: none;
-  color: white
+  color: var(--white)
 }
 .sn-btr {
-  background-color: white; 
+  background-color: var(--white); 
 }
 .sn-btr-selected {
-  background-color: #005588; 
+  background-color: var(--primary); 
 }
 .sn-htd {
-  background-color: white;
-  color: #005588;
+  background-color: var(--white);
+  color: var(--primary);
 }
 .sn-htr {
-  background-color: #005588;
+  background-color: var(--primary);
   color: white;
   text-align: center;
 }
