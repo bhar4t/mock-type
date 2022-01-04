@@ -3,10 +3,10 @@ import BarChart from '../BarChart'
 import { switchChart } from '../../redux/charts/chartActions'
 
 export default function ChartView() {
-    const dispatch = useDispatch<dispatchChartType>()
     const selectedChart = useSelector<ChartState, ChartState["selectedChart"]>((state: any) => state.chart.selectedChart)
     const chartData = useSelector<ChartState, ChartState["chartData"]>((state: any) => state.chart.chartData)
-
+    
+    const dispatch = useDispatch<dispatchChartType>()
     const clickHandler = (chartType: "alerts" |  "priority" | "overall") => dispatch(switchChart(chartType))
 
     return (
