@@ -1,16 +1,6 @@
 import { ResponsiveBar } from '@nivo/bar'
 import { ArrowRight, ArrowUp } from "../../icons/Icons";
 
-const data = [
-    {
-      "country": "1",
-      "File": 4,
-      "Email": 2,
-      "Phone": 1,
-      "Planned": 2,
-    }
-]
-
 interface SelectedSiteNamesProp {
     selectedSite: Site
 }
