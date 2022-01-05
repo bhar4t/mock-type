@@ -41,7 +41,7 @@ export default function CustomTable({ data, headers, title, keys, zigzag = false
                                                 ?
                                                     <div className="ct-data">{ele.name} <div style={styles.indicator(ele.indicator)} /> </div>
                                                 :
-                                                e === 'indicator' ? null :  e === 'link' ? <Link /> : ele[e]
+                                                e === 'indicator' ? null :  e === 'link' ? <div onClick={(e:any) => { window.open(ele.link, '_blank') }}><Link /></div> : ele[e]
                                             }
                                         </td>
                                     ))

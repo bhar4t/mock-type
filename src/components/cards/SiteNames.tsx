@@ -31,7 +31,7 @@ export default function SiteNames({ sites, selectedSite }: SiteNamesProp) {
                                         <td className={`sn-btd${e === selectedSite ? '-selected' : ''}`}><div className="sn-indicator">{e.score} {e.angle === 'right' ? <ArrowRight /> : <ArrowUp />}</div></td>
                                         <td className={`sn-btd${e === selectedSite ? '-selected' : ''}`}><div className="sn-indicator">{e.eduScore} {e.angle === 'right' ? <ArrowRight /> : <ArrowUp />}</div></td>
                                         <td className={`sn-btd${e === selectedSite ? '-selected' : ''}`}><div className="sn-indicator">{e.estaScore} {e.angle === 'right' ? <ArrowRight /> : <ArrowUp />}</div></td>
-                                        <td className="sn-btd sn-btd-link"><Link size={10} /></td>
+                                        <td className="sn-btd sn-btd-link"><div onClick={(evt:any) => { window.open(e?.link, '_blank') }}><Link size={10} /></div></td>
                                     </tr>
                                 );
                             })

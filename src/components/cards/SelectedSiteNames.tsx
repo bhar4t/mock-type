@@ -35,9 +35,9 @@ export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesPro
             </div>
             <div className="ssn-chart">
                 <ResponsiveBar
-                    data={selectedSite?.name === "Site Not Selected" ? [] : data}
+                    data={selectedSite?.name === "Site Not Selected" ? [] : [{ File: selectedSite.score.toFixed(0), Email: selectedSite.eduScore.toFixed(0), Phone: selectedSite.estaScore.toFixed(0), Planned: selectedSite.estaScore.toFixed(0), country: selectedSite.id + ''}]}
                     keys={[ 'File', 'Email', 'Phone', 'Planned' ]}
-                    indexBy="country"
+                    indexBy="id"
                     margin={{ top: 10, right: 130, bottom: 38, left: 60 }}
                     padding={0.3}
                     layout="horizontal"
