@@ -6,11 +6,11 @@ export default function RightInfoBar() {
             <div className="rib-container">
                 <div className="rib-acts">
                     <div>
-                        <div className="rib-arr-up" />
+                        <div className="rib-arr up" />
                         <span className='rib-count rib-green'>5</span>
                     </div>
                     <div>
-                        <div className="rib-arr-down" />
+                        <div className="rib-arr down" />
                         <span className='rib-count rib-red'>3</span>
                     </div>
                 </div>
