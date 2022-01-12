@@ -12,7 +12,7 @@ interface Site {
 
 type SitesState = {
     sites: Site[]
-    site: Site
+    site: Site | null
 }
 
 type SiteAction = {

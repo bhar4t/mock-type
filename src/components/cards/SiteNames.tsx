@@ -4,7 +4,7 @@ import { selectSite } from '../../redux/sites/SiteActions';
 
 interface SiteNamesProp {
     sites: Site[]
-    selectedSite: Site
+    selectedSite: Site | null
 }
 
 export default function SiteNames({ sites, selectedSite }: SiteNamesProp) {

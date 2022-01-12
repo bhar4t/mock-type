@@ -2,7 +2,7 @@ import { ResponsiveBar } from '@nivo/bar'
 import { ArrowRight, ArrowUp } from "../../icons/Icons";
 
 interface SelectedSiteNamesProp {
-    selectedSite: Site
+    selectedSite: Site | null
 }
 
 export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesProp): JSX.Element {
@@ -25,7 +25,7 @@ export default function SelectedSiteNames({ selectedSite }: SelectedSiteNamesPro
             </div>
             <div className="ssn-chart">
                 <ResponsiveBar
-                    data={selectedSite?.name === "Site Not Selected" ? [] : [{ File: selectedSite.score.toFixed(0), Email: selectedSite.eduScore.toFixed(0), Phone: selectedSite.estaScore.toFixed(0), Planned: selectedSite.estaScore.toFixed(0), country: selectedSite.id + ''}]}
+                    data={selectedSite ? [{ File: selectedSite?.score?.toFixed(0), Email: selectedSite?.eduScore?.toFixed(0), Phone: selectedSite?.estaScore?.toFixed(0), Planned: selectedSite?.estaScore?.toFixed(0), country: selectedSite?.id + ''}] : []}
                     keys={[ 'File', 'Email', 'Phone', 'Planned' ]}
                     indexBy="id"
                     margin={{ top: 10, right: 130, bottom: 38, left: 60 }}

@@ -69,17 +69,7 @@ const initialState: SitesState = {
             updatedBy: "John Carter"
         },
     ],
-    site: {
-        id: 0,
-        name: "Site Not Selected",
-        tier: "",
-        angle: "up",
-        score: 0,
-        eduScore: 0,
-        estaScore: 0,
-        link: "",
-        updatedBy: ""
-    },
+    site: null
 }
 
 const siteReducer = (state: SitesState = initialState, action: SiteAction) => {
